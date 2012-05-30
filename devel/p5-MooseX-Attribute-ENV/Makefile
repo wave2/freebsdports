@@ -2,7 +2,7 @@
 # Date created:				18 November 2010
 # Whom: 				alan <Alan@Wave2.org>
 #
-# $FreeBSD: ports/devel/p5-MooseX-Attribute-ENV/Makefile,v 1.2 2011/09/17 07:06:29 sunpoet Exp $
+# $FreeBSD: ports/devel/p5-MooseX-Attribute-ENV/Makefile,v 1.3 2012/05/28 08:22:58 culot Exp $
 #
 
 PORTNAME=	MooseX-Attribute-ENV
@@ -14,8 +14,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	Alan@Wave2.org
 COMMENT=	Set default of an attribute to a value from %ENV
 
-RUN_DEPENDS=	p5-Moose>=1.19:${PORTSDIR}/devel/p5-Moose
-TEST_DEPENDS=	p5-Moose>=1.19:${PORTSDIR}/devel/p5-Moose
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-Moose>=1.19:${PORTSDIR}/devel/p5-Moose
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PERL_CONFIGURE=	yes
 
